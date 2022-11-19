@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="./adaptive_style.css" />
+		<link rel="stylesheet" href="./style.css" />
+		<style>
+			@import url("https://fonts.cdnfonts.com/css/chirp-2");
+		</style>
+
+		<script src="./main.js" defer></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+			crossorigin="anonymous"
+			defer
+		></script>
+
+		<title>Hakaton</title>
+	</head>
+	<body>
+		<div class="container">
+			<!-- navbar start -->
+
+			<div class="navbar__container">
+				<div class="navbar__top">
+					<img src="./img/twitter.png" alt="" class="navbar__logo" />
+					<div class="navbar__home navbar__buttons">
+						<img src="./img/home.png" alt="" class="home__img navbar__img" />
+						<strong class="home">Home</strong>
+					</div>
+					<div class="navbar__bookmarks navbar__buttons">
+						<img
+							src="./img/bookmark.png"
+							alt=""
+							class="bookmarks__img navbar__img"
+						/>
+						<strong class="bookmarks">Bookmarks</strong>
+					</div>
+					<div class="navbar__profile navbar__buttons">
+						<img src="./img/user.png" alt="" class="profile__img navbar__img" />
+						<strong class="profile"> Profile </strong>
+					</div>
+					<div class="navbar__aboutUs navbar__buttons">
+						<img
+							src="./img/comment-question.png"
+							alt=""
+							class="aboutUs__img navbar__img"
+						/>
+						<strong class="aboutUs">About Us</strong>
+					</div>
+					<button class="navbar__tweet">
+						<strong class="tweet">Tweet</strong>
+					</button>
+				</div>
+			</div>
+			<!-- navbar end -->
+
+			<!-- title start -->
+
+			<div class="title__container">
+				<div class="title__top">
+					<strong class="latestTweets">Latest Tweets</strong>
+					<!-- <input class="search" type="text" placeholder="Search" /> -->
+					<!-- <div class="wrap"> -->
+					<div class="search">
+						<input
+							type="text"
+							class="searchTerm"
+							placeholder="What are you looking for?"
+						/>
+						<button type="submit" class="searchButton">
+							<!-- <i class="fa fa-search"></i> -->
+							<img
+								src="./img/magnifying-glass.png"
+								alt=""
+								class="fa fa-search"
+							/>
+						</button>
+					</div>
+
+					<!-- </div> -->
+				</div>
+				<div class="title__middle">
+					<div class="title__middle_left">
+						<!-- <div class="middle_left"> -->
+						<img class="profile_img" src="./img/user2.png" alt="" />
+						<!-- </div> -->
+					</div>
+					<div class="title__middle_right">
+						<div class="title__middle_right_first">
+							<input
+								placeholder="What's happening?"
+								type="text"
+								name=""
+								id=""
+								class="whats_happening"
+							/>
+						</div>
+						<div class="title__middle_right_second">
+							<!-- <div class="title__tweet"> -->
+							<button class="title__tweet"><strong>Tweet</strong></button>
+							<!-- </div> -->
+						</div>
+					</div>
+				</div>
+
+				<!--? Modal edit start -->
+				<div
+					class="modal fade"
+					id="exampleModal"
+					tabindex="-1"
+					aria-labelledby="exampleModalLabel"
+					aria-hidden="true"
+				>
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="exampleModalLabel">
+									<img src="./img/twitter.png" alt="" class="modal-logo" />
+								</h5>
+								<img
+									src="./img/x-button.png"
+									class="btn-close"
+									data-bs-dismiss="modal"
+									aria-label="Close"
+								/>
+							</div>
+							<div class="modal-body">
+								<!-- body of edit modal -->
+								<div class="d-flex flex-column w-100 align-items-center admin">
+									<h2>Edit Tweet</h2>
+									<input
+										type="text"
+										id="edit-tweet"
+										class="mb-2 w-100 form-control inp edit-tweet"
+										placeholder="Edit tweet"
+									/>
+								</div>
+								<!-- body of edit modal -->
+							</div>
+							<div class="modal-footer">
+								<button
+									type="button"
+									class="btn btn-secondary"
+									data-bs-dismiss="modal"
+								>
+									Close
+								</button>
+								<button
+									type="button"
+									class="btn btn-primary"
+									id="btn-save-edit"
+								>
+									Save changes
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--? Modal edit end -->
+
+				<!-- ?content start -->
+				<div class="tweets__list"></div>
+				<!-- ?content end -->
+
+				<!--? Pagination start -->
+				<nav class="pagination">
+					<ul class="pagination__cont">
+						<li class="page__item prev">
+							<p class="page__link">< Prev</p>
+						</li>
+						<div class="parination__list"></div>
+						<li class="page__item next">
+							<p class="page__link">Next ></p>
+						</li>
+					</ul>
+				</nav>
+			</div>
+			<!-- title end -->
+		</div>
+	</body>
+</html>

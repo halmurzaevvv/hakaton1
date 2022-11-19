@@ -1,0 +1,417 @@
+* {
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgb(0, 0, 0);
+	color: #fff;
+	font-family: "Chirp", sans-serif;
+}
+
+.container {
+	width: 80%;
+	margin: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.navbar__container {
+	/* border: 1px solid rgb(255, 255, 255); */
+	width: 30%;
+	padding: 3% 1%;
+	height: 100vh;
+	display: flex;
+	justify-content: space-between;
+	/* align-items:; */
+	flex-direction: column;
+}
+
+.navbar__top {
+	padding: 3% 1%;
+
+	/* height: 500px;
+	margin: 2% 0 2% 0; */
+}
+
+.navbar__logo {
+	width: 12%;
+}
+
+.navbar__img {
+	width: 8%;
+	height: 100%;
+	margin-right: 10px;
+}
+
+.navbar__buttons {
+	font-size: 20px;
+	width: 100%;
+	height: 25px;
+	/* height: 100%; */
+	margin: 20px 0px 20px 0px;
+	display: flex;
+	flex-wrap: wrap;
+	/* justify-content: space-between; */
+}
+
+.navbar__tweet {
+	font-size: 17px;
+	width: 80%;
+	height: 50px;
+	border-radius: 25px;
+	background-color: #1b9df0;
+	color: #fff;
+	display: block;
+	align-items: center;
+	text-align: center;
+}
+
+/* .navbar__footer {
+	padding: 80% 0px 0px 0px;
+	display: flex;
+	position: static bottom;
+} */
+
+/* ======================================================= */
+
+.title__container {
+	border: 1px solid grey;
+	height: 100vh;
+	width: 70%;
+	display: flex;
+	/* flex-wrap: wrap; */
+	flex-direction: column;
+	justify-content: flex-start;
+	/* align-items: baseline; */
+
+	/* align-items: ; */
+}
+
+.title__top {
+	border: 1px solid grey;
+	border-bottom: none;
+	width: 100%;
+	font-size: 20px;
+	height: 50px;
+	padding: 5% 0 5% 2%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.latestTweets {
+	width: 40%;
+}
+
+.search {
+	width: 40%;
+	position: relative;
+	display: flex;
+}
+
+.searchTerm {
+	width: 80%;
+	border: 3px solid #1b9df0;
+	border-right: none;
+	padding: 5px;
+	height: 36px;
+	border-radius: 20px 0 0 20px;
+	outline: none;
+	color: #9dbfaf;
+}
+
+.searchTerm:focus {
+	color: #000;
+}
+
+.searchButton {
+	width: 40px;
+	height: 36px;
+	border: 1px solid #1b9df0;
+	background: #1b9df0;
+	text-align: center;
+	color: #fff;
+	border-radius: 0 2px 20px 0;
+	cursor: pointer;
+	font-size: 20px;
+}
+
+.fa {
+	width: 100%;
+}
+
+/* ============ */
+
+.title__middle {
+	width: 100%;
+	height: 200px;
+	display: flex;
+	flex-wrap: wrap;
+	border-bottom: 1px solid grey;
+}
+
+.title__middle_left {
+	width: 15%;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+.profile_img {
+	padding-top: 15%;
+	width: 60%;
+}
+
+.title__middle_right {
+	width: 80%;
+	display: flex;
+	flex-direction: column;
+	justify-content: left;
+}
+
+.whats_happening {
+	background: transparent;
+	border: none;
+	border-bottom: 1px solid grey;
+	height: 100px;
+	width: 100%;
+	font-size: 20px;
+	outline: none;
+	color: #fff;
+}
+
+.whats_happening:focus {
+	color: #fff;
+	border-bottom: 1px solid rgb(196, 196, 196);
+}
+
+.title__middle_right_second {
+	height: 80px;
+	display: flex;
+	align-items: center;
+	justify-content: right;
+}
+
+.title__tweet {
+	font-size: 17px;
+	width: 30%;
+	height: 50px;
+	color: #fff;
+	border-radius: 25px;
+	background-color: #5193bc;
+	display: block;
+	align-items: center;
+	text-align: center;
+}
+
+.title__tweet:hover {
+	background-color: #1b9df0;
+	cursor: pointer;
+}
+
+/* ===================================== */
+
+.tweets__container {
+	height: 150px;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border: 1px solid grey;
+}
+
+.tweets__list_left {
+	height: 130px;
+	width: 15%;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+.tweets__list_right {
+	width: 85%;
+	display: flex;
+	flex-direction: column;
+	justify-content: left;
+}
+
+.btn__list {
+	width: 80%;
+	height: 60px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	color: #000;
+	background-color: #000;
+}
+
+.descr__list {
+	width: 90%;
+	height: auto;
+	display: flex;
+	overflow-wrap: break-word;
+}
+
+.btns {
+	width: 20px;
+	height: 20px;
+}
+
+/*! Pagination */
+
+.pagination {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.pagination__cont {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	list-style-type: none;
+}
+
+.prev {
+	background-color: #444857;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 5px;
+	width: 90px;
+	height: 50px;
+	border-radius: 10%;
+}
+.next {
+	background-color: #444857;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 5px;
+	width: 90px;
+	height: 50px;
+	border-radius: 10%;
+	position: relative;
+}
+
+.page-link {
+	display: flex;
+}
+
+/* ! edit */
+
+.modal-dialog {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.modal-content {
+	background-color: #000;
+	border: 1px solid grey;
+	border-radius: 4%;
+	width: 800px;
+	height: 400px;
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+	align-items: center;
+}
+
+.modal-header {
+	padding: 0px 15px 0px 15px;
+	width: 100%;
+	/* border: 1px solid gray; */
+	height: 60px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.modal-logo {
+	width: 10%;
+}
+.btn-close {
+	width: 10%;
+	height: 50%;
+}
+.modal-body {
+	width: 100%;
+	height: 180px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.admin {
+	width: 90%;
+	height: 160px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.edit-tweet {
+	background: transparent;
+	border: none;
+	border-bottom: 1px solid grey;
+	height: 100px;
+	width: 100%;
+	font-size: 20px;
+	outline: none;
+	color: #fff;
+}
+
+.edit-tweet:focus {
+	background-color: #000;
+	color: #fff;
+	border-bottom: 1px solid rgb(192, 192, 192);
+}
+
+.modal-footer {
+	width: 100%;
+	height: 60px;
+	display: flex;
+	justify-content: right;
+	align-items: center;
+	margin: 10px;
+}
+
+.btn-secondary {
+	border: none;
+	font-size: 17px;
+	width: 20%;
+	height: 40px;
+	color: #fff;
+	border-radius: 10%;
+	background-color: #444857;
+	display: block;
+	align-items: center;
+	text-align: center;
+}
+
+.btn-primary {
+	margin: 10px;
+	border: none;
+	font-size: 17px;
+	width: 35%;
+	height: 40px;
+	color: #fff;
+	border-radius: 10%;
+	background-color: #1b9df0;
+	display: block;
+	align-items: center;
+	text-align: center;
+}
+
+.btn__like:focus {
+	background-color: red;
+}
